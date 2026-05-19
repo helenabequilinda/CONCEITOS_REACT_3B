@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 
 export default function Usuario () {
     const [contador, setContador] = useState(0)
+    const [email, setEmail] = useState('')
+    const [nome, setNome] = useState('')
+    const [senha, setSenha] = useState('')
     const [usuarios, setUsuarios] = useState([])
 
     useEffect(() => {
@@ -24,6 +27,34 @@ export default function Usuario () {
             <h1>{contador}</h1>
 
             <button onClick= {() =>{setContador(contador + 1)}}>somar</button>
+
+            <input type="text" id="email" 
+            placeholder="DIGITE EMAIL"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            
+            />
+
+            <h3>{email}</h3>
+
+            <input type="text" id="nome" 
+            placeholder="DIGITE NOME"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            
+            />
+
+            <h3>{nome}</h3>
+
+            <input type="text" id="senha" 
+            placeholder="DIGITE SENHA"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            
+            />
+
+            <h3>{senha}</h3>
+
         <ul>
             {usuarios.map( (usuario) => (
                 <li key={usuario.id}>
