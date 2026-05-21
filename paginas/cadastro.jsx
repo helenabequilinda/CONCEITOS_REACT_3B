@@ -1,7 +1,12 @@
-export default function Cadastro () {
+export default function Cadastro ({navegar}) {
 
 
-    return (
-        <h1>Cadastro</h1>
+      return (
+        <div>
+            <h1>Cadastro</h1>
+            <button onClick={() => navegar('login')}>ja tenho cadastro</button>
+        </div>
+        
+
     )
 }
